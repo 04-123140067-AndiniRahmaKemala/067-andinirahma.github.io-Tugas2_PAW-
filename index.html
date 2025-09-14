@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Website resmi Institut Teknologi Sumatera (ITERA) berisi berita, pengumuman, dan informasi akademik.">
+  <title>ITERA - Halaman Utama</title>
+
+  <style>
+    :root {
+      --border-color: #333;
+      --cell-padding: 8px;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0;
+      padding: 16px;
+      line-height: 1.5;
+      color: #222;
+    }
+    header h1 { margin: 0 0 8px; font-size: 1.75rem; }
+    .logo { max-width: 700px; height: auto; display: block; }
+    nav ul { list-style: none; padding: 0; margin: 8px 0; display: flex; gap: 12px; }
+    nav a { text-decoration: none; color: #0366d6; }
+    main { margin-top: 16px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }
+    @media (max-width: 800px) { main { grid-template-columns: 1fr; } }
+
+    /* Tabel: menggantikan atribut border & cellpadding */
+    .fakultas-table { border-collapse: collapse; width: 100%; }
+    .fakultas-table th,
+    .fakultas-table td {
+      border: 1px solid var(--border-color);
+      padding: var(--cell-padding);
+      text-align: left;
+    }
+    caption { caption-side: top; font-weight: bold; padding-bottom: 8px; }
+
+    aside h2, section h2 { margin-top: 0; }
+    footer { margin-top: 24px; font-size: 0.9rem; color: #555; }
+  </style>
+</head>
+<body>
+  <!-- (opsional) link "skip to content" untuk aksesibilitas -->
+  <a href="#main" style="position:absolute;left:-9999px;">Lewati ke konten utama</a>
+
+  <header>
+    <h1>Institut Teknologi Sumatera</h1>
+    <p>
+      <img src="OIP.jpeg" alt="Logo ITERA" class="logo" title="Logo Institut Teknologi Sumatera">
+    </p>
+    <p>
+      Institut Teknologi Sumatera (ITERA) adalah perguruan tinggi negeri di Lampung Selatan 
+      yang berfokus pada pendidikan, penelitian, dan pengembangan teknologi untuk mendukung kemajuan bangsa.
+    </p>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section>
+      <h2>Selamat Datang di Website ITERA</h2>
+      <p>
+        Website ini dibuat untuk menampilkan informasi seputar kampus ITERA, mulai dari pengumuman,
+        berita terkini, hingga data fakultas. Halaman ini menjadi pusat informasi bagi mahasiswa, dosen,
+        dan masyarakat umum.
+      </p>
+    </section>
+
+    <aside>
+      <h2>Pengumuman</h2>
+      <ul>
+        <li><a href="#">Pendaftaran Mahasiswa Baru 2025</a></li>
+        <li><a href="#">Agenda Kuliah Umum - Februari 2025</a></li>
+      </ul>
+    </aside>
+
+    <section>
+      <h2>Data Fakultas ITERA</h2>
+
+      <!-- Tabel tanpa atribut obsolete -->
+      <table class="fakultas-table" aria-describedby="caption-fakultas">
+        <caption id="caption-fakultas">Daftar Fakultas ITERA</caption>
+        <thead>
+          <tr>
+            <th>Fakultas</th>
+            <th>Jumlah Prodi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fakultas Sains</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Fakultas Teknologi Industri</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Fakultas Teknologi Infrastruktur dan Kewilayahan</td>
+            <td>11</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Institut Teknologi Sumatera</p>
+  </footer>
+</body>
+</html>
